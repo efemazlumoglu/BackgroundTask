@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pokemonFetchTask.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60)
         do {
           try BGTaskScheduler.shared.submit(pokemonFetchTask)
-            print("successed of schedule background pokemon fetch and earliest begin date is: ", pokemonFetchTask.earliestBeginDate as Any)
+          print("successed of schedule background pokemon fetch and earliest begin date is: ", pokemonFetchTask.earliestBeginDate as Any)
         } catch {
           print("Unable to submit task: \(error.localizedDescription)")
         }
